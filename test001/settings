@@ -1,0 +1,43 @@
+
+< 0. react + babel singleton 개발 >
+# CDN URL로 react와 babel을 바로 사용 할 수 있는 방법
+
+file: /public/index_singleton.html
+
+< 1. react 추가 >
+# reactjs 시작을 위한 설치
+
+yarn add react react-dom
+
+< 2. babel 추가 >
+# 자바스크립트 컴파일러
+# 브라우저가 이해할 수 있는 문법으로 변환해 줌(ES6, ES7)
+# jsx를 적용하기 위한 설치
+# https://medium.com/@ljs0705/babel-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-a1d0e6bd021a
+
+yarn add --dev @babel/core @babel/preset-react @babel/preset-env
+
+< 3. webpack 추가 >
+# 파일을 통합하여 하나의 파일로 처리
+
+yarn add --dev webpack webpack-cli
+
+< 4. babel-loader 추가 >
+# webpack에서 .js, .jsx 파일의 컴파일을 위해 설정
+
+yarn add --dev babel-loader
+
+
+
+==========================================
+
+git config --global user.name "yang10"
+git config --global user.email "yangejeyeol@gmail.com"
+
+git config --list
+
+git remote
+
+git remote add origin https://github.com/Yangjeyeol/reactjs_test.git
+
+git push origin master
