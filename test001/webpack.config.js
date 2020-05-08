@@ -1,12 +1,12 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.js', // 시작파일
     output: {
-        filename: 'index_bundle.js',
-        path: path.resolve(__dirname, 'build')
+        filename: 'bundle.[hash].js', // 결합파일 이름
+        path: path.resolve(__dirname, 'build') // 결합파일 위치
     },
-    module: {
+    module: { // 결합을 위한 컴파일 조건 설정
         rules: [
             {
                 test: /\.(js|jsx)$/,
@@ -17,5 +17,5 @@ module.exports = {
             }
         ]
     },
-    mode: 'none'
+    mode: 'none' // 개발, 서비스 구별을 위한 필드
 };

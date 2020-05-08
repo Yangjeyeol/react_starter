@@ -4,6 +4,11 @@
 
 file: /public/index_singleton.html
 
+< 0. yarn 프로젝트 >
+# package.json 파일 생성
+
+yarn init -y
+
 < 1. react 추가 >
 # reactjs 시작을 위한 설치
 
@@ -11,14 +16,17 @@ yarn add react react-dom
 
 < 2. babel 추가 >
 # 자바스크립트 컴파일러
-# 브라우저가 이해할 수 있는 문법으로 변환해 줌(ES6, ES7)
+# 브라우저가 이해할 수 있는 문법으로 변환해 줌(ES6, ES7로 코딩 후 ES5로 변환)
 # jsx를 적용하기 위한 설치
+# /.babelrc 파일 추가, babel 설정파일
 # https://medium.com/@ljs0705/babel-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-a1d0e6bd021a
 
-yarn add --dev @babel/core @babel/preset-react @babel/preset-env
+yarn add --dev @babel/core @babel/preset-react @babel/preset-env @babel/plugin-proposal-class-properties
 
 < 3. webpack 추가 >
 # 파일을 통합하여 하나의 파일로 처리
+# /webpack.config.js 에서 webpack 설정
+# 실행: package.json 에 scripts 추가
 
 yarn add --dev webpack webpack-cli
 
