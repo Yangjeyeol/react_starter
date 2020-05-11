@@ -1,0 +1,10 @@
+
+> yarn init -y
+
+> yarn add react react-dom react-router-dom
+
+> yarn add --dev @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties
+
+> yarn add --dev webpack webpack-cli webpack-dev-server babel-loader css-loader style-loader url-loader html-webpack-plugin
+
+

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
 
 class Todo extends Component {
     constructor(props) {
@@ -42,7 +43,10 @@ class TodoList extends Component {
 class TodoItem extends Component {
     render() {
         return (
-            <div>This is todo item.</div>
+            <div>
+                This is todo item.<br/>
+                <Button variant="outlined" size="small" color="primary">Click me.</Button>
+            </div>
         );
     }
 }

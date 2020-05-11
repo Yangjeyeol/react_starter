@@ -10,32 +10,52 @@ file: /public/index_singleton.html
 yarn init -y
 
 < 1. react 추가 >
-# reactjs 시작을 위한 설치
+# 리액트 설치
+#
+# react : 리액트 기본 라이브러리
+# react-dom : 리액트에서 브라우저 Dom의 매서드 제공
+# react-router-dom : 리액트에서 url에 따른 페이지를 보여주기 위함
 
-yarn add react react-dom
+yarn add react react-dom react-router-dom
 
 < 2. babel 추가 >
-# 자바스크립트 컴파일러
+# 바벨 : 자바스크립트 컴파일러
 # 브라우저가 이해할 수 있는 문법으로 변환해 줌(ES6, ES7로 코딩 후 ES5로 변환)
-# jsx를 적용하기 위한 설치
 # /.babelrc 파일 추가, babel 설정파일
 # https://medium.com/@ljs0705/babel-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-a1d0e6bd021a
+#
+# @babel/core : 바벨 기본 라이브러리
+# @babel/preset-env : ES6, ES7 의 코드를 ES5로 변환
+# @babel/preset-react : 리액트에서 JSX를 사용하도록 함
+# @babel/plugin-proposal-class-properties : 클래스 속성을 사용할 수 있도록 도와 줌
 
 yarn add --dev @babel/core @babel/preset-react @babel/preset-env @babel/plugin-proposal-class-properties
 
 < 3. webpack 추가 >
-# 파일을 통합하여 하나의 파일로 처리
-# /webpack.config.js 에서 webpack 설정
+# /webpack.config.js 에서 웹팩 설정
 # 실행: package.json 에 scripts 추가
+#
+# webpack : 웹팩 기본 라이브러리, 파일을 통합하여 하나의 파일로 처리
+# webpack-cli : 웹팩을 명령어라인에서 실행 가능하도록 함
 
 yarn add --dev webpack webpack-cli
 
 < 4. babel-loader 추가 >
-# webpack에서 .js, .jsx 파일의 컴파일을 위해 설정
+# babel-loader : 웹팩에서 .js, .jsx 파일의 컴파일을 위해 설정
 
 yarn add --dev babel-loader
 
+< 5. webpack dev 서버 사용 >
+# webpack-dev-server : 웹팩용 개발서버
+# css-loader style-loader : 웹팩에 css 적용
+# html-webpack-plugin : 웹팩에서 html 파일과 결합을 위한 플러그인
 
+yarn add --dev webpack-dev-server css-loader style-loader html-webpack-plugin
+
+< 6. Material-UI 설치 >
+# Material-UI : reactjs 에서 가장 인기있는 UI 라이브러리
+
+yarn add @material-ui/core
 
 ==========================================
 

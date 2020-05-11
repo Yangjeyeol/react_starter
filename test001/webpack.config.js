@@ -1,6 +1,9 @@
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
+    mode: 'development', // 개발, 서비스 구별을 위한 필드
     entry: './src/index.js', // 시작파일
     output: {
         filename: 'bundle.[hash].js', // 결합파일 이름
@@ -14,8 +17,32 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            //camelCase: true,
+                            sourceMap: true
+                        }
+                    }
+                ]
             }
         ]
     },
-    mode: 'none' // 개발, 서비스 구별을 위한 필드
+    plugins: [
+        new HtmlWebpackPlugin({ template: 'public/index.html' })
+    ],
+    devtool: 'inline-source-map',
+    devServer: {
+        host: 'localhost',
+        port: 4000,
+        historyApiFallback: true
+    }
 };
